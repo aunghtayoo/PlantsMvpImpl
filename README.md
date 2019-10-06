@@ -7,6 +7,7 @@
   <li>PADC Atchitecture (view, data, network) layers</li>
   <li>Bind Images with Glide Library</li>
   <li>Room Database Implementations</li>
+  <li><b>CollapsingToolbarLayout</b></li>
   <li><b>MVP Architecture</b> Setup</li>
 <ul>
   
