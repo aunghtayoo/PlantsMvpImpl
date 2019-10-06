@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:layout_marginBottom="@dimen/margin_medium_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardElevation="@dimen/margin_small"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/ic_favourite"
+            android:src="@drawable/ic_favorite_secondary"
+            android:layout_margin="@dimen/margin_medium_3"/>
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:id="@+id/img_plant"
+            android:scaleType="fitEnd"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_heading_1x"
+            android:textStyle="bold"
+            android:text="Monstera"
+            android:id="@+id/lbl_title"
+            android:layout_above="@id/img_person"
+            android:textColor="@color/color_secondary"
+            android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/img_person"
+            android:scaleType="centerCrop"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@color/color_secondary"
+            android:layout_margin="@dimen/margin_medium_3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:id="@+id/lbl_person_name"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/img_person"
+            android:textColor="@color/color_secondary"
+            android:text="By Kate B."/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

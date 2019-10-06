@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="304dp"
+        android:background="@drawable/img_green_bg"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="@dimen/margin_medium_3"
+                    android:src="@drawable/ic_subject_black_24dp"
+                    android:id="@+id/ic_subject"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Flowers\nSchool"
+                    android:id="@+id/lbl_header"
+                    android:layout_margin="@dimen/margin_medium_3"
+                    android:textColor="@color/color_white"
+                    android:textStyle="bold"
+                    android:layout_below="@id/ic_subject"
+                    android:textSize="@dimen/text_big"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_search"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/lbl_header">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        app:hintEnabled="false"
+                        android:layout_weight="0.9"
+                        android:id="@+id/search_layout"
+                        android:background="@color/color_white"
+                        android:layout_margin="@dimen/margin_medium_3">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/txt_search"
+                            android:hint="Search"
+                            android:textColor="@color/color_dark"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/margin_medium"
+                            android:background="@color/color_transparent"
+                            android:paddingRight="@dimen/margin_medium"
+                            android:textColorHint="@color/color_text_hint"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_weight="0.1"
+                        android:id="@+id/ic_search"
+                        android:layout_marginRight="@dimen/margin_medium_2"
+                        android:src="@drawable/ic_search_black_24dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_plants"
+            android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

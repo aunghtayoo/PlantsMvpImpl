@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:id="@+id/layout_header">
+            
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitEnd"
+                android:src="@drawable/img_grape"/>
+            
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="LOGIN"
+                android:id="@+id/lbl_login"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:textSize="@dimen/text_heading_2x"
+                android:textStyle="bold"
+                android:textColor="@color/color_green"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_login"
+                android:textSize="@dimen/text_regular"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="Sign in your account to continue"/>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_header"
+            android:id="@+id/layout_form"
+            android:layout_marginLeft="@dimen/margin_xxlarge">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EMAIL ID"
+                android:layout_marginLeft="@dimen/margin_medium_3"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                android:textColor="@color/color_dark"
+                android:id="@+id/lbl_email"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@id/lbl_email"
+                android:inputType="textEmailAddress"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_centerVertical="true"
+                android:hint="name@gmail.com"
+                android:background="@drawable/login_edittext_background"
+                android:elevation="@dimen/margin_small"
+                android:id="@+id/text_email"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD"
+                android:layout_marginLeft="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_below="@id/text_email"
+                android:textSize="@dimen/text_small"
+                android:textStyle="bold"
+                android:textColor="@color/color_dark"
+                android:id="@+id/lbl_password"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@id/lbl_password"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:elevation="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:inputType="textPassword"
+                android:password="true"
+                android:background="@drawable/login_edittext_background"
+                android:id="@+id/text_password"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_green"
+                android:id="@+id/lbl_forgot_password"
+                android:text="Forgot Password ?"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:layout_below="@id/text_password"
+                android:gravity="right"/>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:layout_marginRight="@dimen/margin_xxlarge"
+            android:layout_below="@+id/layout_form"
+            android:background="@drawable/login_button_background"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_regular"
+            android:elevation="@dimen/margin_small"
+            android:id="@+id/btn_login"
+            android:text="LOGIN"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

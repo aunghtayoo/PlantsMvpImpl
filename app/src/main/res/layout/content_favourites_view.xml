@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_medium_3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favourite"
+        android:textSize="@dimen/margin_medium_3"
+        android:textStyle="bold"
+        android:id="@+id/lbl_title_favourite"
+        android:textColor="@color/color_dark"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tab_layout"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        app:tabTextColor="@color/color_secondary"
+        app:tabIndicatorColor="@color/color_secondary"
+        android:layout_below="@id/lbl_title_favourite"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_layout"
+        android:id="@+id/vp_favourite"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+</RelativeLayout>
